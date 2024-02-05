@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea #2</title>
+</head>
+
+<body>
+    <form name="formulario">
+        <table style="text-align: left; margin-left: auto; margin-right: auto;">
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="dia">Ingresa el valor de día:</label>
+                    </td>
+                    <td>
+                        <input name="dia" required="required" type="number" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mes">Ingresa el valor de mes:</label>
+                    </td>
+                    <td>
+                        <input name="mes" required="required"  type="number" />
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2" rowspan="1">
+                        <input value="Procesar" type="button" onclick="procesarFormulario();" />
+                        <input type="reset" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <script>
+        function obtenerSignoZodiacal(dia, mes) {
+            if ((mes === 3 && dia >= 21) || (mes === 4 && dia <= 19)) {
+                return "Aries";
+            } else if ((mes === 4 && dia >= 20) || (mes === 5 && dia <= 20)) {
+                return "Tauro";
+            } else if ((mes === 5 && dia >= 21) || (mes === 6 && dia <= 20)) {
+                return "Géminis";
+            } else if ((mes === 6 && dia >= 21) || (mes === 7 && dia <= 22)) {
+                return "Cáncer";
+            } else if ((mes === 7 && dia >= 23) || (mes === 8 && dia <= 22)) {
+                return "Leo";
+            } else if ((mes === 8 && dia >= 23) || (mes === 9 && dia <= 22)) {
+                return "Virgo";
+            } else if ((mes === 9 && dia >= 23) || (mes === 10 && dia <= 22)) {
+                return "Libra";
+            } else if ((mes === 10 && dia >= 23) || (mes === 11 && dia <= 21)) {
+                return "Escorpio";
+            } else if ((mes === 11 && dia >= 22) || (mes === 12 && dia <= 21)) {
+                return "Sagitario";
+            } else if ((mes === 12 && dia >= 22) || (mes === 1 && dia <= 19)) {
+                return "Capricornio";
+            } else if ((mes === 1 && dia >= 20) || (mes === 2 && dia <= 18)) {
+                return "Acuario";
+            } else {
+                return "Piscis";
+            }
+        }
+
+        function procesarFormulario() {
+            let dia = parseInt(document.formulario.dia.value, 10);
+            let mes = parseInt(document.formulario.mes.value, 10);
+
+            let signo = obtenerSignoZodiacal(dia, mes);
+            alert("El signo zodiacal es: " + signo);
+        }
+    </script>
+</body>
+
+</html>

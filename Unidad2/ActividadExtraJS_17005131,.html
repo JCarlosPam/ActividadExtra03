@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+</head>
+
+<body>
+    <script>
+        function generarCarta() {
+            return Math.floor(Math.random() * 11) + 1;
+        }
+
+        function jugarBlackjack() {
+            // Cartas de la computadora
+            var cartaComputadora1 = generarCarta();
+            var cartaComputadora2 = generarCarta();
+            var totalComputadora = cartaComputadora1 + cartaComputadora2;
+
+            // Cartas del usuario
+            var cartaUsuario1 = generarCarta();
+            var cartaUsuario2 = generarCarta();
+            var totalUsuario = cartaUsuario1 + cartaUsuario2;
+
+            alert("La computadora tiene una carta oculta y una carta con valor: " + cartaComputadora2);
+            alert("Tus cartas son: " + cartaUsuario1 + " y " + cartaUsuario2 + ". Tu total es: " + totalUsuario);
+
+            while (confirm("¿Deseas otra carta? Actualmente el valor de tus cartas suma: " + totalUsuario)) {
+                var nuevaCarta = generarCarta();
+                totalUsuario += nuevaCarta;
+                alert("Tu nueva carta vale " + nuevaCarta + ". Tu total es " + totalUsuario);
+
+                if (totalUsuario > 21) {
+                    alert("Lastima, te has pasado de 21. Tu total es " + totalUsuario + ". La computadora gana.");
+                    return;
+                }
+            }
+
+            alert("La computadora tiene las cartas " + cartaComputadora1 + " y " + cartaComputadora2 + ". Su total es: " + totalComputadora);
+
+            while (totalComputadora < 17) {
+                var nuevaCartaComputadora = generarCarta();
+                totalComputadora += nuevaCartaComputadora;
+            }
+
+            alert("La computadora ha tomado cartas adicionales y su total es: " + totalComputadora);
+
+            alert("El jugador tiene un total de " + totalUsuario);
+            alert("La computadora tiene un total de " + totalComputadora);
+
+            if (totalUsuario > totalComputadora && totalUsuario <= 21) {
+                alert("¡Enhorabuena, has ganado!");
+            } else if (totalComputadora > totalUsuario && totalComputadora <= 21) {
+                alert("Lastima, has perdido. La computadora gana.");
+            } else {
+                alert("Empate.");
+            }
+        }
+
+        // Iniciar el juego al cargar la página
+        jugarBlackjack();
+    </script>
+</body>
+
+</html>
