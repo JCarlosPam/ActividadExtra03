@@ -1,0 +1,3 @@
+El sistema binario es un sistema numérico que utiliza solo dos dígitos, 0 y 1, para representar la información. Es fundamental en la computación, ya que los circuitos electrónicos de las computadoras trabajan con señales binarias.
+
+En cuanto a los algoritmos, son conjuntos de instrucciones paso a paso diseñados para realizar una tarea o resolver un problema específico. Los algoritmos pueden implementarse en diversos lenguajes de programación y son la base de la programación y la resolución eficiente de problemas computacionales.

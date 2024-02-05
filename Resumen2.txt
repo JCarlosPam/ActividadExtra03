@@ -1,0 +1,5 @@
+Los operadores lógicos son herramientas en programación que permiten combinar o comparar expresiones lógicas. Los más comunes son AND (y), OR (o) y NOT (no), utilizados para tomar decisiones basadas en condiciones.
+
+Las estructuras en programación organizan el código. Las más básicas son secuenciales, condicionales (como if-else) y de repetición (bucles). Las estructuras condicionales permiten ejecutar diferentes bloques de código según ciertas condiciones, mientras que las estructuras de repetición (bucles) permiten realizar acciones de forma repetida mientras se cumplan ciertas condiciones.
+
+Los bucles, como for y while, son herramientas poderosas para repetir bloques de código. For se utiliza para iterar sobre una secuencia específica de elementos, mientras que while se repite mientras una condición sea verdadera. Estas estructuras y bucles son fundamentales para controlar el flujo de un programa.
